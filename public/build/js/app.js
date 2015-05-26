@@ -26913,7 +26913,9 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 })(window, window.angular);
 
 /*global  angular: true */
-angular.module('app')
+angular.module('app', [
+  'ngRoute'
+])
 .controller('MasterController', [
     '$scope',
     '$log',
@@ -26921,7 +26923,7 @@ angular.module('app')
     function($scope, $log, $rootScope) {
         'use strict';
 
-
+        
 
     }
 ]);

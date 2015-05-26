@@ -44,19 +44,18 @@ module.exports = function(grunt) {
         cssmin: {
             build: {
                 files: {
-                    'public/build/css/style.min.css': 'public/build/css/app.css'
+                    'public/build/css/app.min.css': 'public/build/css/app.css'
                 }
             }
         },
 
-        // COOL TASKS ==============================================================
         watch: {
             css: {
-                files: ['public/styles/css/**/*.less'],
+                files: ['public/styles/**/*.less'],
                 tasks: ['less', 'cssmin']
             },
             js: {
-                files: ['public/src/js/**/*.js'],
+                files: ['public/js/**/*.js'],
                 tasks: ['jshint', 'uglify']
             }
         },

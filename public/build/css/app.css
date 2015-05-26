@@ -11131,3 +11131,6 @@ Copyright (c) 2015 Daniel Eden
 body {
   font-family: 'Open Sans', sans-serif;
 }
+.starter-template {
+  padding-top: 50px;
+}
