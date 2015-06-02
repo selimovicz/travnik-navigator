@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+    /*jslint smarttabs:true */
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['public/js/**/*.js'],
-                tasks: ['jshint', 'uglify']
+                tasks: ['concat', 'uglify']
             }
         },
 
@@ -84,6 +84,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
 
-    grunt.registerTask('default', ['less', 'cssmin', 'jshint', 'concat', 'uglify', 'concurrent']);
+    grunt.registerTask('default', ['less', 'cssmin', 'concat', 'uglify', 'concurrent']);
 
 };

@@ -17,6 +17,21 @@ module.exports = function(app) {
 		});
 	});
 
+
+	// get single location
+	app.get('/location/:id', function(req, res) {
+		// use mongoose to get single location in the database
+		Locations.find({
+	 		_id : req.params.id
+	 	}, function(err, locations) {
+
+			// if there is an error retrieving, send the error. nothing after res.send(err) will execute
+			if (err)
+				res.send(err);
+			res.json(locations); // return all todos in JSON format
+		});
+	});
+
 	// // create todo and send back all todos after creation
 	// app.post('/api/todos', function(req, res) {
 

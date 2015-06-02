@@ -26912,33 +26912,88 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 })(window, window.angular);
 
-/*global  angular: true */
-angular.module('app', [
-  'ngRoute'
-])
-.controller('MasterController', [
+/*global App: true */
+var App = angular.module('App', [
+        'ngRoute'
+    ])
+    .constant('conf', {
+        locationsPath: '/locations'
+    });
+/*global App: true, angular:true */
+App.controller('MasterController', [
     '$scope',
     '$log',
     '$rootScope',
-    function($scope, $log, $rootScope) {
+    '$routeParams',
+    'LocationService',
+    function($scope, $log, $rootScope, $routeParams, LocationService) {
         'use strict';
 
-        
+        $scope.locations = [];
+
+        LocationService.getLocations()
+            .then(function(locationsResponse) {
+                    angular.forEach(locationsResponse, function(locations) {
+                        $scope.locations.push({
+                            'id': locations._id,
+                            'name': locations.name,
+                        });
+                    });
+                },
+                function(error) {
+                    console.log('this');
+                });
+
+        if($routeParams.id) {
+        	LocationService.getLocations($routeParams.id)
+            .then(function(locationsResponse) {
+                    angular.forEach(locationsResponse, function(locations) {
+                        $scope.location = {
+                            'id': locations._id,
+                            'name': locations.name,
+                        };
+                    });
+
+                    console.log('---', $scope.location);
+                },
+                function(error) {
+                    console.log('this');
+                });
+        }
 
     }
 ]);
 
-angular.module('app', [
-  'ngRoute'
-])
-.config(
+/*global App: true, angular:true */
+App.config(
 	[
 		'$routeProvider',
 		function($routeProvider) {
 			$routeProvider
 				.when('/', {
-					templateUrl: 'js/views/initial_screen.html'
+					templateUrl: 'js/views/initial_screen.html',
+				})
+				.when('/:id', {
+					templateUrl: 'js/views/initial_screen.html',
 				});
 		}
 	]
 );
+/*global angular:true, is:true, console: true */
+App.service('LocationService', ['$http', '$location', 'conf', function($http, $location, conf) {
+    'use strict';
+
+    var locations = {};
+
+    locations.getLocations = function(location_id) {
+        if(!location_id) location_id = '';
+        return $http.get(conf.locationsPath + location_id)
+            .then(function(response) {
+                return response.data;
+            }, function(response) {
+                return response.status;
+            });
+    };
+
+    return locations;
+}]);

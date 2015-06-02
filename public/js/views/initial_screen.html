@@ -23,7 +23,11 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Travnik navigator</h1>
+        <h1>View here</h1>
+
+        <ul>
+          <li ng-repeat="location in locations"><a ng-href="/#{{location.id}}" class="btn btn-default">{{location.name}}</a></li>
+        </ul>
       </div>
 
     </div><!-- /.container -->
