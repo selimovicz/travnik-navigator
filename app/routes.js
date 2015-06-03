@@ -19,7 +19,7 @@ module.exports = function(app) {
 
 
 	// get single location
-	app.get('/location/:id', function(req, res) {
+	app.get('/locations/:id', function(req, res) {
 		// use mongoose to get single location in the database
 		Locations.find({
 	 		_id : req.params.id

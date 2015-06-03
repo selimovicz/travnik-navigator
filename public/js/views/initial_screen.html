@@ -1,35 +1,36 @@
-<div class="initial-screen" ng-controller="MasterController">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+<div class="initial-screen">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#">Project name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
     </nav>
-
     <div class="container">
+        <div id="locations">
+            <h1>Travnik navigator</h1>
+            <br/>
+            <ul class="nav nav-pills">
+                <li ng-repeat="location in locations"><a ui-sref="location.instance({locationId: location._id})" ui-sref-active="selected" class="btn btn-default">{{location.name}}</a></li>
+            </ul>
+            <br/>
+            <br/>
+            <br/>
 
-      <div class="starter-template">
-        <h1>View here</h1>
-        <h2> Map </h2>
-
-        <ul>
-          <li ng-repeat="location in locations"><a ng-href="/#{{location.id}}" class="btn btn-default">{{location.name}}</a></li>
-        </ul>
-      </div>
-
-    </div><!-- /.container -->
+            <div ui-view="instance"></div>
+        </div>
+    </div>
+    <!-- /.container -->
 </div>

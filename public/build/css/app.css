@@ -11130,7 +11130,11 @@ Copyright (c) 2015 Daniel Eden
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
-.starter-template {
-  padding-top: 50px;
+#locations {
+  padding-top: 80px;
+}
+#locations .selected {
+  font-weight: bold;
 }

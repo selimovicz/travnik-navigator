@@ -1,6 +1,6 @@
 /*global App: true */
 var App = angular.module('App', [
-        'ngRoute'
+        'ui.router'
     ])
     .constant('conf', {
         locationsPath: '/locations'
