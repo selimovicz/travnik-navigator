@@ -11138,3 +11138,58 @@ body {
 #locations .selected {
   font-weight: bold;
 }
+.navbar {
+  border: none;
+  font-size: 12px;
+}
+.navbar .navbar-header .navbar-brand {
+  padding: 10px;
+}
+.navbar .navbar-collapse .navbar-nav {
+  margin-left: 50px;
+}
+.navbar-default {
+  border-bottom: 2px solid #03BDED;
+  background-color: #4E5D6C;
+  color: #fff;
+}
+.navbar-default form {
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 0;
+  position: relative;
+  width: 420px;
+}
+.navbar-default form input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 30px;
+  margin-left: 20px;
+  border-bottom: 1px solid #EAE8E8;
+  font-size: 13px;
+  color: #ffffff;
+}
+.navbar-default form .search-icon-wow {
+  position: absolute;
+  z-index: 1000;
+  top: 6px;
+  right: -11px;
+  font-size: 17px;
+  color: #d3d3d3;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #e8e8e8;
+  font-weight: 400;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #222222;
+}

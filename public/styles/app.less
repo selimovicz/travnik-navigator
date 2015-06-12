@@ -1,23 +1,84 @@
 // Bootstrap
 @import "bower_components/bootstrap/less/bootstrap.less";
-
 // Animate
 @import (less) "bower_components/animate.css/animate.css";
-
 // Components: Font Awesome
-@import "bower_components/font-awesome/less/font-awesome.less";
-
+@import (less) "bower_components/font-awesome/less/font-awesome.less";
 // Open Sans font
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,700&subset=latin,latin-ext);
-
-body{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
 #locations {
-	padding-top: 80px;
-	.selected{
-		font-weight: bold;
-	}
+    padding-top: 80px;
+    .selected {
+        font-weight: bold;
+    }
+}
+
+// Navbar =====================================================================
+.navbar {
+    .navbar-header {
+        .navbar-brand {
+            padding: 10px;
+        }
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            margin-left: 50px;
+        }
+    }
+    border: none;
+    font-size: 12px;
+    &-default {
+        border-bottom: 2px solid #03BDED;
+        form {
+            float: left;
+            margin-top: 5px;
+            margin-bottom: 0;
+            position: relative;
+            width: 420px;
+            input {
+                background: transparent;
+                border: none;
+                border-radius: 0;
+                padding-top: 8px;
+                padding-bottom: 7px;
+                padding-left: 10px;
+                padding-right: 30px;
+                margin-left: 20px;
+                border-bottom: 1px solid #EAE8E8;
+                font-size: 13px;
+                color: #ffffff;
+            }
+            .search-icon-wow {
+                position: absolute;
+                z-index: 1000;
+                top: 6px;
+                right: -11px;
+                font-size: 17px;
+                color: #d3d3d3;
+                background: transparent;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+        }
+        .navbar-nav {
+            & > li>a {
+                color: #e8e8e8;
+                font-weight: 400;
+            }
+        }
+        background-color: #4E5D6C;
+        color: #fff;
+    }
+    &-inverse {
+        .badge {
+            background-color: #fff;
+            color: @navbar-inverse-bg;
+        }
+    }
 }

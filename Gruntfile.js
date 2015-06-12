@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['public/js/**/*.js'],
-                tasks: ['concat', 'uglify']
+                tasks: ['concat']
             }
         },
 
@@ -85,6 +85,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
 
-    grunt.registerTask('default', ['less', 'cssmin', 'concat', 'uglify', 'concurrent']);
+    grunt.registerTask('default', ['less', 'cssmin', 'concat', 'concurrent']);
 
 };
