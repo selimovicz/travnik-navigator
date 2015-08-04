@@ -19,14 +19,167 @@
             <div class="navbar-collapse collapse" id="navbar-main">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#">Kreiraj objekat</a>
+                        <a href="#">Dodaj novu lokaciju</a>
                     </li>
                     <li>
-                        <a href="#">O nama</a>
+                        <a href="#">Pridruzi nam se</a>
                     </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="container-fluid" id="list">
+
+        <div class="col-md-4 animated fadeInDown category-list" ng-if="false">
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Smjestaj</h4>
+                    <span>Hotel, Motel, Apartman</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-bed fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Hrana</h4>
+                    <span>Restorani, Fast Food, Pekare</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-cutlery fa-2x"></i>
+                </div>
+            </div>
+            
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Kafa</h4>
+                    <span>Kafić, Kafana, Slastičarna, Desert</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-coffee fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Night Life</h4>
+                    <span>Noćni Klub, Pub, Bar, Lounge, Vinoteka</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-coffee fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Shopping</h4>
+                    <span>Butik, Knjižara, Cvjećara, Supermarket, Trgovački centar</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-shopping-cart fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Turisticke atrakcije</h4>
+                    <span>Stari grad, Dzamije, Sahat kule, Crkve, Turbeta</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-camera-retro fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Sport</h4>
+                    <span>Fudbalski stadioni, kosarkaski tereni, teniski tereni</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-futbol-o fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Biznis lokacije</h4>
+                    <span>Agencije, kompanije, fabrike</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-suitcase fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row category">
+                <div class="col-md-10 category-name">
+                    <h4>Ostale lokacije drustvenog znacaja</h4>
+                    <span>Banke, poste, apoteke, bolnice</span>
+                </div>
+                <div class="col-md-2 text-center category-icon">
+                    <i class="fa fa-user fa-2x"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 animated fadeInDown location-list" ng-if="true">
+            <div class="row location">
+                <div class="col-md-4 location-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/%C5%A0arena_d%C5%BEamija.jpg" class="pull-left" height="100" width="120">
+                </div>
+                <div class="col-md-8 location-name">
+                    <h4>Sarena dzamija</h4>
+                    <p>Zitarnica bb</p>
+                    <p><i class="fa fa-phone"></i> 033/515-415</p>
+                    <div class="location-categories">
+                        <i class="fa fa-camera-retro"></i>&nbsp;
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <div class="details">
+                    <a href="#">Detaljno <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="row location">
+                <div class="col-md-4 location-img">
+                    <img src="https://c1.staticflickr.com/9/8354/8381318935_7e8ea8c3b8_b.jpg" class="pull-left" height="100" width="120">
+                </div>
+                <div class="col-md-8 location-name">
+                    <h4>Jeni dzamija</h4>
+                    <p>Bosanska bb</p>
+                    <p><i class="fa fa-phone"></i> 033/515-415</p>
+                    <div class="location-categories">
+                        <i class="fa fa-camera-retro"></i>
+                    </div>
+                </div>
+                <div class="details">
+                    <a href="#">Detaljno <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="row location">
+                <div class="col-md-4 location-img">
+                    <img src="https://lh6.googleusercontent.com/-xX4qgxUonLY/UOyRjcVcvtI/AAAAAAAAEjI/22Xyk88Qy_g/s640/111.jpg" class="pull-left" height="100" width="120">
+                </div>
+                <div class="col-md-8 location-name">
+                    <h4>Hadzi Ali-begova dzamija</h4>
+                    <p>Bosanska bb</p>
+                    <p><i class="fa fa-phone"></i> 033/515-415</p>
+                    <div class="location-categories">
+                        <i class="fa fa-camera-retro"></i>&nbsp;
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <div class="details">
+                    <a href="#">Detaljno <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+
     </div>
     <!-- <div class="container-fluid" id="main" style="margin-top:52px;">
         <div class="row">

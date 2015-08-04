@@ -4,11 +4,10 @@
 @import (less) "bower_components/animate.css/animate.css";
 // Components: Font Awesome
 @import (less) "bower_components/font-awesome/less/font-awesome.less";
-// Open Sans font
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,700&subset=latin,latin-ext);
+
 body {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 #locations {
@@ -32,8 +31,9 @@ body {
     }
     border: none;
     font-size: 12px;
+    height: 30px;
     &-default {
-        border-bottom: 2px solid #03BDED;
+        border-bottom: 3px solid #03BDED;
         form {
             float: left;
             margin-top: 5px;
@@ -49,9 +49,16 @@ body {
                 padding-left: 10px;
                 padding-right: 30px;
                 margin-left: 20px;
-                border-bottom: 1px solid #EAE8E8;
+                border-bottom: 1px solid #fff;
                 font-size: 13px;
-                color: #ffffff;
+                outline: none;
+                -webkit-box-shadow: none !important;
+                -moz-box-shadow: none !important;
+                box-shadow: none !important;
+                color: #fff;
+                &:focus{
+                    border-bottom: 1px solid #fff;
+                }
             }
             .search-icon-wow {
                 position: absolute;
@@ -67,18 +74,100 @@ body {
             }
         }
         .navbar-nav {
-            & > li>a {
-                color: #e8e8e8;
+            & > li> a {
+                color: #dfdfdf;
                 font-weight: 400;
+                &:hover{
+                    color: #fff;
+                }
             }
         }
         background-color: #4E5D6C;
         color: #fff;
     }
-    &-inverse {
-        .badge {
-            background-color: #fff;
-            color: @navbar-inverse-bg;
+    .navbar-main{
+        .dropdown{
+            a{
+                color: #dfdfdf;
+            }
+        }
+    }
+}
+
+#list{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-top: 60px;
+    .category{
+        padding: 5px 18px;
+        border: 1px solid #dfdfdf;
+        cursor: pointer;
+        margin-top: 6px;
+        border-left: 4px solid #5D82A6;
+        .category-name{
+            h4{
+                margin: 4px;
+                font-size: 18px;
+                color: #04acd8;
+                font-weight: 300;
+            }
+            span{
+                font-size: 12px;
+                color: #999;
+            }
+        }
+        .category-icon{
+            padding-top: 10px;
+            i{
+                color: #03BDED;
+            }
+        }
+        &:hover{
+            border-color: #03BDED;
+            opacity: 0.9;
+        }
+        
+    }
+    .location{
+        padding: 5px;
+        border: 1px solid #dfdfdf;
+        cursor: pointer;
+        border-left: 4px solid #5D82A6;
+        margin-top: 10px;
+        h4{
+            margin-top: 4px;
+            font-size: 16px;
+            color: #04acd8;
+            font-weight: 300;
+            border-bottom: 1px solid #dfdfdf;
+            padding-bottom: 5px;
+        }
+        p{
+            color: #999;
+            margin: 0px;
+            font-size: 12px;
+        }
+        .location-img{
+            padding: 0px;
+        }
+        &:hover{
+            border-color: #03BDED;
+            opacity: 0.9;
+        }
+        .location-categories{
+            margin-top: 8px;
+            i{
+                color: #03BDED;
+            }
+        }
+        .details{
+            float: right;
+            margin-top: -17px;
+            a{  
+                color: #03BDED;
+                font-size: 12px;
+                text-decoration: none;
+            }
         }
     }
 }
